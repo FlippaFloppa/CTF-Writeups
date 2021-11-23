@@ -1,3 +1,8 @@
+<p align="center">
+<img src="https://img.itch.zone/aW1nLzQ0NTQ0ODEuZ2lm/original/OnrQhz.gif" width="150" height="150">
+<img src="https://www.pinclipart.com/picdir/big/542-5429860_macintosh-128k-cpu-only-svg-vector-file-vector.png" width="400" height="400">
+<img src="https://img.itch.zone/aW1nLzQ0NTQ0ODEuZ2lm/original/OnrQhz.gif" width="150" height="150">
+</p>
 
 # FlippaFloppa writeups
 
