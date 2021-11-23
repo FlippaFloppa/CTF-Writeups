@@ -6,7 +6,7 @@
 
 # FlippaFloppa writeups
 
-
+### The challenges come from:
 - https://app.hackthebox.com/
 - https://tryhackme.com/
 - https://overthewire.org/
@@ -16,7 +16,7 @@
 
 > In this repository you can find some solutions of the most interesting and curios challenges that our team has solved :)
 
-### The challenges come from:
+### Our profiles:
 ##### HackTheBox ->  [Turixen_HTB] , [BlessedRebus_HTB] ,[Luca3700_HTB]
 ##### TryHackMe -> [Turixen_THM] , [BlessedRebus_THM] ,
 ##### CryptoHack -> [Turixen_Crypto] , [BlessedRebus_Crypto] ,
