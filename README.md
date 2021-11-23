@@ -5,6 +5,7 @@
 - https://app.hackthebox.com/
 - https://tryhackme.com/
 - https://overthewire.org/
+- https://cryptohack.org/
 
 ## Disclaimer
 
