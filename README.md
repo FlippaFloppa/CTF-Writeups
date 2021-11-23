@@ -8,7 +8,7 @@
 
 ## Disclaimer
 
-> k
+> In this repository you can find some solutions of the most interesting and curios challenges that our team has solved :)
 
 ### The challenges come from:
 ##### HackTheBox ->  [Turixen_HTB] , [BlessedRebus_HTB] ,[Luca3700_HTB]
