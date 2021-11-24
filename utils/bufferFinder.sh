@@ -8,7 +8,7 @@ fi
 
 for i in {1..4096}
 do
-	#per velocizzare faccio ogni 32
+	#to speed up i do it every 32 bytes
 	if [ `expr $i % 32` -eq 0 ]
 	then
 		echo provo con $i
