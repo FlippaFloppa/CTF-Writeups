@@ -71,7 +71,7 @@ Now you can set up your files and folder in your filesystem:
 
 **Copy this in /tmp/yourscript.sh**
 
-```bash
+```console
 #!/bin/bash
 
 mkdir /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/
