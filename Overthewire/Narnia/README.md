@@ -61,8 +61,11 @@ narnia3@narnia:~$ gdb narnia3
 ```
 
 `run AAAAAAAAAAAAAAAAAAAAAAAAAAA`
+
 `b open@plt`
+
 `x/700xw $esp`
+
 
 argv[1] will be:
 `/tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/yourfile`
