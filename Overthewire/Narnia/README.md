@@ -28,7 +28,7 @@ In order to see where is the range of address we can fall in using a **NOP-Sled*
 Note the breakpoint at *strcpy*
 
 ```console
-gdb narnia2
+narnia2@narnia:~$ gdb narnia2
 ```
 
 ```bash
@@ -57,7 +57,7 @@ In the stack are allocated `char ofile[16] = "/dev/null"` and `char ifile[32]` a
 You can analyze the stack using:
 
 ```console
-gdb narnia3
+narnia3@narnia:~$ gdb narnia3
 ```
 
 `run AAAAAAAAAAAAAAAAAAAAAAAAAAA`
@@ -71,7 +71,7 @@ Now you can set up your files and folder in your filesystem:
 
 **Copy this in /tmp/yourscript.sh**
 
-```console
+```bash
 #!/bin/bash
 
 mkdir /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/
