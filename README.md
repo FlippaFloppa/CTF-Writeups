@@ -18,19 +18,19 @@
 
 ### Our profiles:
 
-[BlessedRebus]:https://github.com/BlessedRebuS
-[Luca3700]:https://github.com/Luca3700
-[Turixen]:https://github.com/Turixen
+[BlessedRebus] https://github.com/BlessedRebuS \
+[Luca3700] https://github.com/Luca3700 \
+[Turixen] https://github.com/Turixen 
 
-[Turixen_THM]:https://tryhackme.com/p/Turixen
-[BlessedRebus_THM]:https://tryhackme.com/p/Turixen
+[Turixen_THM] https://tryhackme.com/p/Turixen \
+[BlessedRebus_THM] https://tryhackme.com/p/Turixen 
 
-[Turixen_HTB]:https://app.hackthebox.com/profile/810543
-[BlessedRebus_HTB]:https://app.hackthebox.com/profile/413503
-[Luca3700_HTB]:https://app.hackthebox.com/profile/822529
+[Turixen_HTB] https://app.hackthebox.com/profile/810543 \
+[BlessedRebus_HTB] https://app.hackthebox.com/profile/413503 \
+[Luca3700_HTB] https://app.hackthebox.com/profile/822529
 
-[Turixen_Crypto]:https://cryptohack.org/user/Turixen030/
-[BlessedRebus_Crypto]:https://cryptohack.org/user/blessedrebus 
+[Turixen_Crypto] https://cryptohack.org/user/Turixen030 \
+[BlessedRebus_Crypto] https://cryptohack.org/user/blessedrebus 
 
 
 
