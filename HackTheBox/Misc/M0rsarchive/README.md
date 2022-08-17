@@ -11,7 +11,7 @@ Then the game is to automatize all the process. We can do it with a simple bash 
 ````bash
 #!/bin/bash
 
-for i in {162..0}; do
+for i in {999..0}; do
 res=$(./mocr.py pwd.png | tr -d '\n')
 unzip -o -j -P $res "flag_$i.zip"
 done
