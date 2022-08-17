@@ -22,7 +22,7 @@ Inside this directory we don't know exactly what to search, then we can just gre
 
 We just found that inside the directory "_rels" there is a file named "document.xml.rels" that contains the string 
 
-**Target="http://diagnostic.htb:30566/223_index_style_fancy.html**
+**Target="http://diagnostic.htb:30566/223_index_style_fancy.html"**
 
 Again, we replace the domain and we search directly http://206.189.125.80:30566:/223_index_style_fancy.html
 
