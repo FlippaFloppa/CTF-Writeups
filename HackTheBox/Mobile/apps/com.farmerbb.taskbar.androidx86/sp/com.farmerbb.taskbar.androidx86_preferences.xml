@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="shortcut_icon" value="false" />
+    <string name="max_num_of_recents">2147483647</string>
+    <boolean name="freeform_hack_override" value="true" />
+    <string name="refresh_frequency">0</string>
+    <boolean name="collapsed" value="false" />
+    <boolean name="save_window_sizes" value="false" />
+    <boolean name="freeform_hack" value="true" />
+    <boolean name="taskbar_active" value="false" />
+    <boolean name="first_run" value="false" />
+    <string name="recents_amount">running_apps_only</string>
+    <string name="sort_order">true</string>
+    <boolean name="android_x86_prefs" value="true" />
+    <boolean name="launcher" value="true" />
+</map>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="com.android.settings/com.android.settings.wallpaper.WallpaperSuggestionActivity_setup_time" value="1582269968387" />
+    <boolean name="com.android.settings/com.android.settings.password.ScreenLockSuggestionActivity_is_dismissed" value="false" />
+    <long name="com.android.settings/com.android.settings.notification.ZenSuggestionActivity_setup_time" value="1582269968386" />
+    <long name="com.google.android.gm/com.google.android.gm.setup.AccountSetupFinalGmailSuggestions_setup_time" value="1582269968399" />
+    <long name="com.android.settings/com.android.settings.password.ScreenLockSuggestionActivity_setup_time" value="1582269968395" />
+    <long name="com.android.settings/com.android.settings.support.NewDeviceIntroSuggestionActivity_setup_time" value="1582269968387" />
+    <boolean name="com.google.android.gm/com.google.android.gm.setup.AccountSetupFinalGmailSuggestions_is_dismissed" value="false" />
+    <boolean name="com.android.settings/com.android.settings.support.NewDeviceIntroSuggestionActivity_is_dismissed" value="false" />
+    <long name="com.android.settings.suggested.category.HIGH_PRIORITY_setup_time" value="1582269968349" />
+    <boolean name="com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_is_dismissed" value="false" />
+    <long name="com.android.emergency/com.android.emergency.edit.EditInfoSuggestion_setup_time" value="1582269968386" />
+    <long name="com.android.settings.suggested.category.FIRST_IMPRESSION_setup_time" value="1582269968365" />
+    <boolean name="com.android.settings/com.android.settings.notification.ZenSuggestionActivity_is_dismissed" value="false" />
+    <long name="com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_setup_time" value="1581000084084" />
+    <long name="com.android.settings.suggested.category.DEFERRED_SETUP_setup_time" value="1581000083846" />
+    <long name="com.android.settings/com.android.settings.wifi.calling.WifiCallingSuggestionActivity_setup_time" value="1582269968387" />
+</map>

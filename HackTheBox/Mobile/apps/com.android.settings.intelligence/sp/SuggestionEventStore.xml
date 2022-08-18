@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="setting_suggestion_com.google.android.gm/com.google.android.gm.setup.AccountSetupFinalGmailSuggestions_shown_count" value="10" />
+    <long name="setting_suggestion_com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_shown_count" value="3" />
+    <long name="setting_suggestion_com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_clicked_last_event_time" value="1582269973423" />
+    <long name="setting_suggestion_com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_shown_last_event_time" value="1582269968423" />
+    <long name="setting_suggestion_com.android.settings/com.android.settings.password.ScreenLockSuggestionActivity_shown_last_event_time" value="1582276282990" />
+    <long name="setting_suggestion_com.google.android.gm/com.google.android.gm.setup.AccountSetupFinalGmailSuggestions_shown_last_event_time" value="1582276282990" />
+    <long name="setting_suggestion_com.android.settings/com.android.settings.password.ScreenLockSuggestionActivity_shown_count" value="10" />
+    <long name="setting_suggestion_com.google.android.setupwizard/com.google.android.setupwizard.deferred.DeferredSettingsSuggestionActivity_clicked_count" value="1" />
+</map>

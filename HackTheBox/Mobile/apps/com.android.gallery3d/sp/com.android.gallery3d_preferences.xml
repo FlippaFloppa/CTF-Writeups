@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <int name="cache-up-to-date" value="1" />
+    <int name="packages-version" value="38" />
+    <int name="editor-update-image/*" value="38" />
+    <boolean name="has-editor-image/*" value="true" />
+</map>
